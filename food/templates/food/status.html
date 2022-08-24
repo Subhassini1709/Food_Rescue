@@ -1,0 +1,60 @@
+{% extends "food/base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  padding: 20px;
+  background-color: #8db600;
+}
+td{
+    padding: 20px;
+}
+.mainbody{
+    background-color: beige;
+    padding-top: 80px;
+    padding-right: 80px;
+	padding-bottom: 50px;
+	padding-left: 80px;	
+}
+body{
+	background-color: beige;
+}
+</style>
+</head>
+<div class = "mainbody">
+<body>
+
+<table>
+  <tr>
+    <th>Request</th>
+    <th>Pickup Date</th>
+    <th>Status</th>
+  </tr>
+  {% for i in food_orders %}
+    <tr>
+        
+        <td>{{i.title}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.status}}</td>
+    </tr>
+  {% endfor %}
+  
+</table>
+
+</body>
+</div>
+</html>
+
+{% endblock content %}

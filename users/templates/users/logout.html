@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>logout</title>
+		<meta name="viewport" content="width=device-width,initial scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+		<style>
+			body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: beige;
+			}
+
+			.topnav {
+			overflow: hidden;
+			background-color: #8db600;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.topnav a {
+			float: left;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 18px;
+			}
+
+			.topnav a:hover {
+			background-color: black;
+			color: #8db600
+			}
+
+			.topnav a.active {
+			background-color: #e6b208;
+			color: black;
+			}
+			.btn{
+				width:250px ;
+				height:70px;
+				border-radius:50px;
+				border:2px solid #cba774; 
+			}
+			
+			.btn:hover{
+				background-color: #8db600;
+			  }
+			.btn{
+				width:250px ;
+				height:70px;
+				border-radius:50px;
+				border:2px solid #cba774; 
+			}
+			
+			.btn:hover{
+				background-color: #8db600;
+			  }
+			  
+			.mainbody {
+				background-color: beige;
+				
+				padding-top: 80px;
+				padding-right: 80px;
+				padding-bottom: 50px;
+				padding-left: 80px;
+			}
+			
+			.intro{
+				text-align: center;
+			}
+			 
+			</style>
+			<div class="topnav">
+				<a class="active">FOOD RESCUE</a>
+				
+				<a href=" / ">Home</a>
+				
+				<a href="{% url 'About' %}">About</a>
+			  </div>
+			
+
+	</head>
+	<div class = "mainbody">
+		<body>
+				<div class="container">
+				<div class="intro">
+					
+					<h1>You have been logged out!</h1>
+				
+				<a href = "{% url 'Login' %}">
+				<button class="btn">Login Again</button></a>
+
+				</div>
+			</div>
+	</body>
+    </div>
+	</html>
+

@@ -1,0 +1,151 @@
+{% extends "food/base.html" %}
+{% block content %}
+<html>
+	<head>
+		<title>Offer food</title>
+		<meta name="viewport" content="width=device-width,initial scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+
+        <style>
+
+        *{
+            margin: 0;
+            padding:0;
+        }
+        
+        
+        body {
+          background-color: beige;
+          font-family: 'Noto Sans', sans-serif;
+        }
+        
+        div.main{
+            width:400px;
+            margin:100px auto 0px auto;
+        }
+        
+        h2{
+            text-align:center;
+            padding:10%;
+            font-family:sans-serif;
+        }
+        
+        div.offer{
+            background-color: #8db600;
+            width:100%;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow: 2px 2px 15px
+            rgba(0,0,0,0.3);
+            
+        }
+        
+        form#offer{
+            margin:30px;
+        }
+        
+        input#fname{
+            width:300px;
+            height:25px;
+        }
+
+        input#title{
+            width:300px;
+            height:25px;
+        }
+
+        input#lname{
+            width:300px;
+            height:25px;
+        }
+        input#phone_number{
+            width:300px;
+            height:25px;
+        }
+
+        input#email{
+            width:300px;
+            height:25px;
+        }
+        input#date{
+            width:300px;
+            height:25px;
+        }
+        input#time{
+            width:300px;
+            height:25px;
+        }
+        input#quantity{
+            width:300px;
+            height:25px;
+        }
+
+        input#submit{
+            width:200px;
+            padding:10px;
+            background-color: #cba774
+        }
+        
+        textarea#address{
+            width:300px;
+            height:50px;
+            padding-bottom:30px;
+            font-family:sans-serif;
+        }
+        textarea#comment{
+            width:300px;
+            height:50px;
+            padding-bottom:30px;
+            font-family:sans-serif;
+        }
+    </style>
+        
+	</head>
+
+		<body>
+	
+            <div class="main">
+                <div class="offer">
+                    <h2>OFFER FOOD</h2>
+                    <form id="offer" method="POST" action="{% url 'Offer' %}">
+                        {% csrf_token %}
+                     <label for="title">Title</label><br>
+                     <input type="text" name="title" id="title" placeholder="Enter title"><br><br>
+
+                     <label for="fname">First name:</label><br>
+                     <input type="text" name="fname" id="fname" placeholder="Enter your first name"><br><br>
+        
+                      <label for="lname">Last name:</label><br>
+                      <input type="text" name="lname" id="lname" placeholder="Enter your last name"><br><br>
+        
+                       <label for="phone_number">Contact number:</label><br>
+                      <input type="tel" name="phone_number" id="phone_number" placeholder="Enter your phone number"><br><br>
+        
+                      <label for="address">Pickup Address:</label><br>
+                      <textarea type="text" name="address" id="address" placeholder="Enter your address"></textarea><br><br>
+        
+                      <label for="date">Pickup Date:</label><br>
+                      <input type="date" name="date" id="date"><br><br>
+                      
+                      <label for="time">Pickup Time</label>
+                      <input type="time" name="time" id="time"><br><br>
+        
+        
+                      <label for="quantity">Number of people that can be fed:</label><br>
+                      <input type="number" name="quantity" id="quantity"><br><br>
+        
+                      <label for="comment">Comments:</label><br>
+                      <textarea name="comment" id="comment" placeholder="Enter your comments"></textarea><br><br>
+
+                      <input type = "hidden" name = "status" value = "Approval Pending">
+            
+        
+                      <input type="Submit" value="Submit" name="submit" id="submit" >
+                      
+                    </form>
+                </div>
+            </div>
+        </body>
+</html>
+{% endblock content %}
+        
+        

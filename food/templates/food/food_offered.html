@@ -1,0 +1,60 @@
+{% extends "food/base.html" %}
+{% block content %}
+{% load static %}
+<html>
+<html>
+	<head>
+		<title>Food Offer Requested</title>
+		<meta name="viewport" content="width=device-width,initial scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+		<style>
+			.btn{
+				width:250px ;
+				height:70px;
+				border-radius:50px;
+				border:2px solid #cba774; 
+			}
+			
+			.btn:hover{
+				background-color: #8db600;
+			  }
+			  
+			.mainbody {
+				background-color: beige;
+				padding-top: 80px;
+				padding-right: 80px;
+				padding-bottom: 50px;
+				padding-left: 80px;
+			}
+			body{
+				background-color: beige;
+			}
+			
+			.intro{
+				text-align: center;
+			}
+			 
+			</style>
+			
+
+	</head>
+	<div class = "mainbody">
+		<body>
+				<div class="container">
+				<div class="intro">
+					
+					<h1>Thank you for Offering Food!</h1>
+				
+				<a href = "{% url 'Dashboard' %}">
+				<button class="btn">Return to Dashboard</button></a>
+
+				<p>To know the status of the Food Request, check the "Check Status" page from time to time.
+				</p>
+				</div>
+				</div>
+	
+	</body>
+    </div>
+	</html>
+
+{% endblock content %}

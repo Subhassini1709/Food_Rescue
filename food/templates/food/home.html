@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Rescue</title>
+
+    <meta name="viewport" content="width=device-width,initial scale=1">
+    <link href="https://fonts.googleapis.com/css?
+family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #8db600;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .topnav a:hover {
+            background-color: black;
+            color: #8db600
+        }
+
+        .topnav a.active {
+            background-color: #e6b208;
+            color: black;
+        }
+
+        .picture {
+            width: 1530px;
+            height: 600px;
+            box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+            transition: all ease-in-out .2s;
+        }
+
+        .intro {
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: beige;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .btn {
+            width: 250px;
+            height: 70px;
+            border-radius: 50px;
+            border: 2px solid #cba774;
+        }
+
+        .btn:hover {
+
+            background-color: #8db600;
+        }
+
+        .btn.reg {
+            width: 250px;
+            height: 70px;
+            border-radius: 50px;
+            border: 2px solid #cba774;
+        }
+
+        .btn.reg:hover {
+            background-color: #8db600;
+        }
+
+        .btn.vul {
+            width: 250px;
+            height: 70px;
+            border-radius: 50px;
+            border: 2px solid #cba774;
+        }
+
+        .btn.vul:hover {
+            background-color: #8db600;
+        }
+
+        a {
+            font-size: 0px
+        }
+    </style>
+    <div class="topnav">
+        <a class="active">FOOD RESCUE</a>
+        <a href="about">About</a>
+    </div>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="intro">
+
+            <!-- <img class="picture"
+                src="C:\Users\Subhassini Sridharan\Desktop\Subhassini\Projects\django_project\food\static\images\1.jpg"> -->
+            <img src="{% static '/1.jpg' %}" class="picture"/>
+            <h2>Filling stomachs not landfills!</h2>
+            <a href="{% url 'login' %}">
+                <button class="btn">Login</button>
+            </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="{% url 'register' %}">
+                <button class="btn reg">Register</button>
+            </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="{% url 'volunteer' %}">
+                <button class="btn vul">Volunteer to pick up</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
