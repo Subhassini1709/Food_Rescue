@@ -27,10 +27,10 @@ def registerPage(request):
 
 def loginPage(request):
     if request.user.is_authenticated:
-        if UserModel.is_superuser or UserModel.is_staff:
-           return redirect('/admin/')
-        else :
-            return redirect('Dashboard')
+        # if UserModel.is_superuser or UserModel.is_staff:
+        #    return redirect('/admin/')
+        #else :
+        return redirect('Dashboard')
         
     else:
         if request.method == 'POST':
@@ -60,7 +60,7 @@ def dashboard(request):
 
 def logoutPage(request):
     logout(request)
-    return redirect('logout')
+    return render('logout')
 
 
 def volunteerPage(request):

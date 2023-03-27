@@ -30,8 +30,8 @@ urlpatterns = [
     path('volunteer/', user_views.volunteerPage, name='volunteer'),
     path('volunteer/thanks_volunteer/', user_views.thanksvolunteerPage, name='thanks'),
     path('dashboard/', user_views.dashboard, name='Dashboard'),
-    path('logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name='logout'),
-    # path('logout/', user_views.logoutPage,name='logout'),
+    #path('logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name='logout'),
+    path('logout/', user_views.logoutPage,name='logout'),
 
 ]
 
