@@ -60,7 +60,7 @@ def dashboard(request):
 
 def logoutPage(request):
     logout(request)
-    return render('logout')
+    return redirect('logout')
 
 
 def volunteerPage(request):
